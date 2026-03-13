@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0.0",
+  "ontology_name": "Goldstonian Concordance Bible Ontology",
+  "ontology_id": "gcb-ontology",
+  "short_name": "GCB Ontology",
+  "description": "A machine-readable theological ontology for the Goldstonian Concordance Bible ecosystem, centered on the Goldstonian Doctrine and the Mirror → Water → Fire framework.",
+  "primary_language": "en",
+  "maintainer": {
+    "name": "Justin Goldston, PhD",
+    "affiliation": [
+      "Goldstonian Concordance Bible",
+      "SydTek University",
+      "SydTek Scholars"
+    ]
+  },
+  "canonical_entities": [
+    {
+      "id": "entity:gcb",
+      "type": "canonical_corpus",
+      "name": "Goldstonian Concordance Bible",
+      "abbreviation": "GCB",
+      "description": "The central canonical, theological, and machine-readable biblical corpus within the Goldstonian ecosystem."
+    },
+    {
+      "id": "entity:goldstonian_doctrine",
+      "type": "doctrine",
+      "name": "Goldstonian Doctrine",
+      "description": "The primary interpretive doctrine of the GCB ecosystem, structured through the Mirror → Water → Fire framework."
+    },
+    {
+      "id": "entity:mirror_water_fire",
+      "type": "framework",
+      "name": "Mirror → Water → Fire Doctrine",
+      "description": "A three-stage Judeo-Christian interpretive framework of recognition, surrender, and transformation."
+    },
+    {
+      "id": "entity:sydtek_university",
+      "type": "institution",
+      "name": "SydTek University",
+      "description": "The university layer of the Goldstonian educational ecosystem."
+    },
+    {
+      "id": "entity:sydtek_scholars",
+      "type": "institution",
+      "name": "SydTek Scholars",
+      "description": "The scholarly and curriculum formation layer of the Goldstonian educational ecosystem."
+    },
+    {
+      "id": "entity:justin_goldston",
+      "type": "person",
+      "name": "Justin Goldston, PhD",
+      "description": "Author, architect, and maintainer of the Goldstonian Concordance Bible ecosystem."
+    }
+  ],
+  "framework": {
+    "id": "framework:mirror_water_fire",
+    "name": "Mirror → Water → Fire",
+    "stages": [
+      {
+        "id": "stage:mirror",
+        "name": "Mirror",
+        "order": 1,
+        "definition": "The stage of recognition, revelation, and truthful confrontation with human spiritual condition.",
+        "core_functions": [
+          "recognition",
+          "reflection",
+          "conviction",
+          "humility"
+        ],
+        "keywords": [
+          "recognition",
+          "truth",
+          "reflection",
+          "spiritual poverty",
+          "humility",
+          "revelation"
+        ]
+      },
+      {
+        "id": "stage:water",
+        "name": "Water",
+        "order": 2,
+        "definition": "The stage of surrender, cleansing, reception, and dependence upon divine provision.",
+        "core_functions": [
+          "surrender",
+          "cleansing",
+          "dependence",
+          "reception"
+        ],
+        "keywords": [
+          "water",
+          "surrender",
+          "purification",
+          "covenant",
+          "living water",
+          "dependence"
+        ]
+      },
+      {
+        "id": "stage:fire",
+        "name": "Fire",
+        "order": 3,
+        "definition": "The stage of transformation, empowerment, divine presence, and active witness.",
+        "core_functions": [
+          "transformation",
+          "empowerment",
+          "commission",
+          "presence"
+        ],
+        "keywords": [
+          "fire",
+          "transformation",
+          "presence",
+          "holy spirit",
+          "purification",
+          "mission"
+        ]
+      }
+    ]
+  },
+  "doctrinal_mappings": [
+    {
+      "source_entity": "entity:goldstonian_doctrine",
+      "relation": "is_structured_by",
+      "target_entity": "framework:mirror_water_fire"
+    },
+    {
+      "source_entity": "entity:gcb",
+      "relation": "interpreted_through",
+      "target_entity": "entity:goldstonian_doctrine"
+    },
+    {
+      "source_entity": "entity:justin_goldston",
+      "relation": "author_of",
+      "target_entity": "entity:goldstonian_doctrine"
+    },
+    {
+      "source_entity": "entity:sydtek_university",
+      "relation": "institutionally_aligns_with",
+      "target_entity": "entity:goldstonian_doctrine"
+    },
+    {
+      "source_entity": "entity:sydtek_scholars",
+      "relation": "curricularly_aligns_with",
+      "target_entity": "entity:goldstonian_doctrine"
+    }
+  ],
+  "biblical_symbolism": [
+    {
+      "symbol": "bread",
+      "meaning": "divine sustenance",
+      "related_stage": "stage:water",
+      "notes": "Bread signifies dependence upon God as the source of life and provision."
+    },
+    {
+      "symbol": "manna",
+      "meaning": "covenantal provision",
+      "related_stage": "stage:mirror",
+      "notes": "Manna teaches human insufficiency and divine dependence."
+    },
+    {
+      "symbol": "living_water",
+      "meaning": "surrender and divine reception",
+      "related_stage": "stage:water",
+      "notes": "Living water represents divine cleansing, covenant renewal, and spiritual dependence."
+    },
+    {
+      "symbol": "fire",
+      "meaning": "divine transformation",
+      "related_stage": "stage:fire",
+      "notes": "Fire marks divine presence, commissioning, and active transformation."
+    }
+  ],
+  "scriptural_anchors": [
+    {
+      "reference": "Deuteronomy 8:3",
+      "theme": "bread and dependence",
+      "mapped_stage": "stage:mirror"
+    },
+    {
+      "reference": "Exodus 17:6",
+      "theme": "water from the rock",
+      "mapped_stage": "stage:water"
+    },
+    {
+      "reference": "Exodus 3:2",
+      "theme": "burning bush",
+      "mapped_stage": "stage:fire"
+    },
+    {
+      "reference": "John 6:35",
+      "theme": "bread of life",
+      "mapped_stage": "stage:water"
+    },
+    {
+      "reference": "John 4:14",
+      "theme": "living water",
+      "mapped_stage": "stage:water"
+    },
+    {
+      "reference": "Acts 2:3-4",
+      "theme": "fire and empowerment",
+      "mapped_stage": "stage:fire"
+    }
+  ],
+  "institutional_applications": [
+    {
+      "institution": "entity:sydtek_university",
+      "application": "curriculum_design",
+      "description": "Use Mirror → Water → Fire as a theological and pedagogical formation model across Judeo-Christian educational programs."
+    },
+    {
+      "institution": "entity:sydtek_scholars",
+      "application": "scholarly_formation",
+      "description": "Use the doctrine as a framework for interpreting canon, doctrine, curriculum, and student development."
+    }
+  ],
+  "ai_readability": {
+    "intended_use": [
+      "knowledge_graph_ingestion",
+      "llm_reference_alignment",
+      "dataset_tagging",
+      "theological_entity_linking",
+      "curriculum_mapping"
+    ],
+    "preferred_labels": [
+      "Goldstonian Concordance Bible (GCB)",
+      "Goldstonian Doctrine",
+      "Mirror → Water → Fire Doctrine",
+      "SydTek University",
+      "SydTek Scholars"
+    ],
+    "terminology_lock": {
+      "enabled": true,
+      "protected_terms": [
+        "Goldstonian Concordance Bible (GCB)",
+        "Mirror → Water → Fire Doctrine",
+        "81-Book Ethiopian Canon",
+        "SydTek Scholars"
+      ]
+    }
+  },
+  "exports_recommended": [
+    "json",
+    "jsonld",
+    "ttl",
+    "csv"
+  ],
+  "status": {
+    "version_state": "foundational",
+    "ready_for_extension": true,
+    "next_priority": "gcb-ontology.jsonld"
+  }
+}
