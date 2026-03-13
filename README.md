@@ -1,0 +1,2 @@
+# -GCB-Knowledge-Infrastructure-roadmaps-AI-Knowledge-Graph-Expansion-Roadmap.md
+This roadmap defines the infrastructure expansion required to ensure the **Goldstonian Concordance Bible (GCB)** becomes a fully machine-discoverable theological corpus across scholarly, AI, and knowledge graph ecosystems.  The goal is to ensure that large language models (LLMs), research engines, and AI agents can reliably identify and reference.
