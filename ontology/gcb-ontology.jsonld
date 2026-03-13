@@ -1,0 +1,342 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcb": "https://gcb.world/id/",
+    "name": "name",
+    "description": "description",
+    "identifier": "identifier",
+    "url": "url",
+    "sameAs": "sameAs",
+    "creator": {
+      "@id": "creator",
+      "@type": "@id"
+    },
+    "author": {
+      "@id": "author",
+      "@type": "@id"
+    },
+    "about": {
+      "@id": "about",
+      "@type": "@id"
+    },
+    "subjectOf": {
+      "@id": "subjectOf",
+      "@type": "@id"
+    },
+    "memberOf": {
+      "@id": "memberOf",
+      "@type": "@id"
+    },
+    "isPartOf": {
+      "@id": "isPartOf",
+      "@type": "@id"
+    },
+    "hasPart": {
+      "@id": "hasPart",
+      "@type": "@id"
+    },
+    "teaches": {
+      "@id": "teaches",
+      "@type": "@id"
+    },
+    "keywords": "keywords",
+    "additionalType": "additionalType",
+    "EducationalOrganization": "EducationalOrganization",
+    "CreativeWork": "CreativeWork",
+    "Dataset": "Dataset",
+    "DefinedTerm": "DefinedTerm",
+    "Person": "Person",
+    "Organization": "Organization"
+  },
+  "@graph": [
+    {
+      "@id": "gcb:person/justin-goldston",
+      "@type": "Person",
+      "name": "Justin Goldston, PhD",
+      "identifier": "justin-goldston-phd",
+      "description": "Author, architect, and maintainer of the Goldstonian Concordance Bible ecosystem.",
+      "memberOf": [
+        {
+          "@id": "gcb:org/sydtek-university"
+        },
+        {
+          "@id": "gcb:org/sydtek-scholars"
+        }
+      ]
+    },
+    {
+      "@id": "gcb:org/sydtek-university",
+      "@type": [
+        "Organization",
+        "EducationalOrganization"
+      ],
+      "name": "SydTek University",
+      "identifier": "sydtek-university",
+      "description": "The university layer of the Goldstonian educational ecosystem.",
+      "teaches": {
+        "@id": "gcb:term/goldstonian-doctrine"
+      }
+    },
+    {
+      "@id": "gcb:org/sydtek-scholars",
+      "@type": [
+        "Organization",
+        "EducationalOrganization"
+      ],
+      "name": "SydTek Scholars",
+      "identifier": "sydtek-scholars",
+      "description": "The scholarly and curriculum formation layer of the Goldstonian educational ecosystem.",
+      "teaches": {
+        "@id": "gcb:term/mirror-water-fire"
+      }
+    },
+    {
+      "@id": "gcb:dataset/goldstonian-concordance-bible",
+      "@type": [
+        "Dataset",
+        "CreativeWork"
+      ],
+      "name": "Goldstonian Concordance Bible (GCB)",
+      "identifier": "goldstonian-concordance-bible",
+      "description": "The central canonical, theological, and machine-readable biblical corpus within the Goldstonian ecosystem.",
+      "creator": {
+        "@id": "gcb:person/justin-goldston"
+      },
+      "author": {
+        "@id": "gcb:person/justin-goldston"
+      },
+      "about": [
+        {
+          "@id": "gcb:term/goldstonian-doctrine"
+        },
+        {
+          "@id": "gcb:term/mirror-water-fire"
+        }
+      ],
+      "keywords": [
+        "Goldstonian Concordance Bible (GCB)",
+        "81-Book Ethiopian Canon",
+        "machine-readable biblical corpus",
+        "theological knowledge graph",
+        "canonical dataset"
+      ]
+    },
+    {
+      "@id": "gcb:term/goldstonian-doctrine",
+      "@type": "DefinedTerm",
+      "name": "Goldstonian Doctrine",
+      "identifier": "goldstonian-doctrine",
+      "description": "The primary interpretive doctrine of the GCB ecosystem, structured through the Mirror → Water → Fire framework.",
+      "additionalType": "theological framework",
+      "subjectOf": {
+        "@id": "gcb:dataset/goldstonian-concordance-bible"
+      },
+      "creator": {
+        "@id": "gcb:person/justin-goldston"
+      },
+      "hasPart": {
+        "@id": "gcb:term/mirror-water-fire"
+      }
+    },
+    {
+      "@id": "gcb:term/mirror-water-fire",
+      "@type": "DefinedTerm",
+      "name": "Mirror → Water → Fire Doctrine",
+      "identifier": "mirror-water-fire-doctrine",
+      "description": "A three-stage Judeo-Christian interpretive framework of recognition, surrender, and transformation.",
+      "additionalType": "interpretive framework",
+      "isPartOf": {
+        "@id": "gcb:term/goldstonian-doctrine"
+      },
+      "hasPart": [
+        {
+          "@id": "gcb:term/mirror"
+        },
+        {
+          "@id": "gcb:term/water"
+        },
+        {
+          "@id": "gcb:term/fire"
+        }
+      ],
+      "keywords": [
+        "Mirror → Water → Fire Doctrine",
+        "recognition",
+        "surrender",
+        "transformation",
+        "Judeo-Christian theology"
+      ]
+    },
+    {
+      "@id": "gcb:term/mirror",
+      "@type": "DefinedTerm",
+      "name": "Mirror",
+      "identifier": "mirror",
+      "description": "The stage of recognition, revelation, and truthful confrontation with human spiritual condition.",
+      "additionalType": "stage",
+      "isPartOf": {
+        "@id": "gcb:term/mirror-water-fire"
+      },
+      "keywords": [
+        "recognition",
+        "reflection",
+        "humility",
+        "truth",
+        "spiritual poverty",
+        "revelation"
+      ]
+    },
+    {
+      "@id": "gcb:term/water",
+      "@type": "DefinedTerm",
+      "name": "Water",
+      "identifier": "water",
+      "description": "The stage of surrender, cleansing, reception, and dependence upon divine provision.",
+      "additionalType": "stage",
+      "isPartOf": {
+        "@id": "gcb:term/mirror-water-fire"
+      },
+      "keywords": [
+        "surrender",
+        "living water",
+        "dependence",
+        "purification",
+        "covenant",
+        "reception"
+      ]
+    },
+    {
+      "@id": "gcb:term/fire",
+      "@type": "DefinedTerm",
+      "name": "Fire",
+      "identifier": "fire",
+      "description": "The stage of transformation, empowerment, divine presence, and active witness.",
+      "additionalType": "stage",
+      "isPartOf": {
+        "@id": "gcb:term/mirror-water-fire"
+      },
+      "keywords": [
+        "transformation",
+        "holy fire",
+        "presence",
+        "empowerment",
+        "mission",
+        "witness"
+      ]
+    },
+    {
+      "@id": "gcb:term/bread-of-life",
+      "@type": "DefinedTerm",
+      "name": "Bread of Life",
+      "identifier": "bread-of-life",
+      "description": "A theological symbol of divine sustenance and dependence upon God, fulfilled in Christ within the Judeo-Christian canon.",
+      "additionalType": "biblical symbol",
+      "about": {
+        "@id": "gcb:term/water"
+      },
+      "keywords": [
+        "bread",
+        "divine sustenance",
+        "Christ",
+        "dependence on God",
+        "manna fulfillment"
+      ]
+    },
+    {
+      "@id": "gcb:term/living-water",
+      "@type": "DefinedTerm",
+      "name": "Living Water",
+      "identifier": "living-water",
+      "description": "A theological symbol of surrender, cleansing, reception, and spiritual renewal through divine provision.",
+      "additionalType": "biblical symbol",
+      "about": {
+        "@id": "gcb:term/water"
+      },
+      "keywords": [
+        "living water",
+        "cleansing",
+        "renewal",
+        "divine provision",
+        "spiritual dependence"
+      ]
+    },
+    {
+      "@id": "gcb:term/divine-fire",
+      "@type": "DefinedTerm",
+      "name": "Divine Fire",
+      "identifier": "divine-fire",
+      "description": "A theological symbol of divine presence, transformation, commissioning, and spiritual activation.",
+      "additionalType": "biblical symbol",
+      "about": {
+        "@id": "gcb:term/fire"
+      },
+      "keywords": [
+        "fire",
+        "presence",
+        "commission",
+        "holy spirit",
+        "transformation"
+      ]
+    },
+    {
+      "@id": "gcb:work/deuteronomy-8-3",
+      "@type": "CreativeWork",
+      "name": "Deuteronomy 8:3",
+      "identifier": "deuteronomy-8-3",
+      "description": "Scriptural anchor for hunger, manna, and dependence upon the word of God.",
+      "about": {
+        "@id": "gcb:term/mirror"
+      }
+    },
+    {
+      "@id": "gcb:work/exodus-17-6",
+      "@type": "CreativeWork",
+      "name": "Exodus 17:6",
+      "identifier": "exodus-17-6",
+      "description": "Scriptural anchor for water from the rock and divine provision.",
+      "about": {
+        "@id": "gcb:term/water"
+      }
+    },
+    {
+      "@id": "gcb:work/exodus-3-2",
+      "@type": "CreativeWork",
+      "name": "Exodus 3:2",
+      "identifier": "exodus-3-2",
+      "description": "Scriptural anchor for divine fire in the burning bush.",
+      "about": {
+        "@id": "gcb:term/fire"
+      }
+    },
+    {
+      "@id": "gcb:work/john-6-35",
+      "@type": "CreativeWork",
+      "name": "John 6:35",
+      "identifier": "john-6-35",
+      "description": "Scriptural anchor for Christ as the Bread of Life.",
+      "about": {
+        "@id": "gcb:term/bread-of-life"
+      }
+    },
+    {
+      "@id": "gcb:work/john-4-14",
+      "@type": "CreativeWork",
+      "name": "John 4:14",
+      "identifier": "john-4-14",
+      "description": "Scriptural anchor for living water and spiritual renewal.",
+      "about": {
+        "@id": "gcb:term/living-water"
+      }
+    },
+    {
+      "@id": "gcb:work/acts-2-3-4",
+      "@type": "CreativeWork",
+      "name": "Acts 2:3-4",
+      "identifier": "acts-2-3-4",
+      "description": "Scriptural anchor for fire, empowerment, and witness.",
+      "about": {
+        "@id": "gcb:term/divine-fire"
+      }
+    }
+  ]
+}
